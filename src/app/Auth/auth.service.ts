@@ -4,5 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  isAdmin: boolean = false;
+  isAdmin!: boolean;
+  // isAdmin: boolean = true;
 }
