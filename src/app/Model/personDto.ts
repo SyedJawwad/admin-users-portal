@@ -1,7 +1,8 @@
 export class personDto {
-    name!: string;
+    fname!: string;
+    lname!:string;
     phone!: number;
     email!: string;
+    address!:string;
     notes!: string;
-    password!:string;
 }
