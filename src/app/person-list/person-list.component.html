@@ -37,9 +37,9 @@
         <p>{{x.email}}</p>
         <p>{{x.password}}</p>
         <div class="row">
-          <button class="btn btn-danger  col-6" type="button"
+          <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-danger  col-6" type="button"
           (click)="deleteList(i)">Delete</button>
-          <button class="btn btn-primary  col-5 mx-1" type="button"
+          <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-primary  col-5 mx-1" type="button"
           (click)="editList(i)">Edit</button>
         </div>
       </div>

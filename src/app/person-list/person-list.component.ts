@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { personDto } from '../Model/personDto';
 import { AuthService } from '../Auth/auth.service';
+import { SecurityService } from '../services/security.service';
+import { UserType } from '../enums/user.enum';
 
 @Component({
   selector: 'app-person-list',
@@ -8,12 +10,13 @@ import { AuthService } from '../Auth/auth.service';
   styleUrls: ['./person-list.component.css']
 })
 export class PersonListComponent {
-  constructor(private authService: AuthService) {}
 
-  isAdminLoggedIn(): boolean {
-    return this.authService.isAdmin;
-  }
+  constructor(private authService: AuthService, public securityService: SecurityService) {}
 
+  // isAdminLoggedIn(): boolean {
+  //   return this.authService.isAdmin('true')
+  // }
+  userTypeEnum = UserType;
   personList=new Array<personDto>();
   personObj = new personDto();
   selectedIndex = -1;
