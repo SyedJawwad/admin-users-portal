@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { personDto } from '../Model/personDto';
+import { AuthService } from '../Auth/auth.service';
 
 @Component({
   selector: 'app-person-list',
@@ -7,6 +8,11 @@ import { personDto } from '../Model/personDto';
   styleUrls: ['./person-list.component.css']
 })
 export class PersonListComponent {
+  constructor(private authService: AuthService) {}
+
+  isAdminLoggedIn(): boolean {
+    return this.authService.isAdmin;
+  }
 
   personList=new Array<personDto>();
   personObj = new personDto();
