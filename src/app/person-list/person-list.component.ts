@@ -27,18 +27,13 @@ ngOnInit(): void {
   }
 
 }
-  // isAdminLoggedIn(): boolean {
-  //   return this.authService.isAdmin('true')
-  // }
-  
-
 
 storeData(){
-  // var saveData = JSON.parse(localStorage['saveData'] || null) || {};
+  
 
   if (this.selectedIndex === -1) {
     this.personList.push(this.personObj);
-    // localStorage.setItem('saveData', JSON.stringify(this.personObj))
+   
     localStorage.setItem("List",JSON.stringify(this.personList));
    
   } else {

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserType } from './enums/user.enum';
 import { SecurityService } from './services/security.service';
 import { Router } from '@angular/router';
 
@@ -10,20 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'admin-users-portal';
-  // user = UserType;
-  // private router: any;
-  // constructor(
-  //   private securityService: SecurityService  ) {}
-  // ngOnInit():void {
-    
-  //   this.securityService.securityObject = JSON.parse("userData");
-  //   if (this.user?.id) {
+  
+  constructor(private securityService: SecurityService, private router: Router) {}
 
-  //   } else {
-  //     this.router.navigateByUrl('./login/login.component');    }
-  // }
-    
-  
-  
+  ngOnInit(): void {
+    // Check if the user is logged in
+    if (this.securityService.userType === undefined) {
+      // If not, redirect to the login page
+      this.router.navigateByUrl('/login');
+    }
+  } 
 }
-

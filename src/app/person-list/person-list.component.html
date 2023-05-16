@@ -1,7 +1,4 @@
-<!-- <div>
-    <p ngIf="userData"></p>
-  </div> -->
-
+<!-- First section for Data Entry -->
 
 <div class="container pt-3">
   <div class="row">
@@ -59,8 +56,7 @@
   </div>
 </div>
 
-
-
+<!-- Second Section for Sumbit Data -->
 
 <div class="container">
   <div class="table-responsive">
@@ -104,30 +100,12 @@
 
               <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-danger bt-sm" type="button"
                 (click)="deleteList(i)"><i class="fa-solid fa-trash"></i></button>
-              <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-primary mx-2" type="button"
+              <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-primary mt-1 " type="button"
                 (click)="editList(i)"><i class="fa-solid fa-pen-to-square"></i></button>
             </td>
-
-
           </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </tbody>
       </table>
-
-
     </div>
   </div>
 </div>

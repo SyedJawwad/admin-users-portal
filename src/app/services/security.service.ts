@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { UserType } from '../enums/user.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SecurityService {
-userType!: number
+  userType: UserType = UserType.Member;
+
   constructor() { }
+
+  setUserType(userType: UserType): void {
+    this.userType = userType;
+  }
 }
