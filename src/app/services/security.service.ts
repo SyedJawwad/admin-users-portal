@@ -5,7 +5,7 @@ import { UserType } from '../enums/user.enum';
   providedIn: 'root'
 })
 export class SecurityService {
-  userType: UserType = UserType.Member;
+  userType: UserType = UserType.Admin;
 
   constructor() { }
 
