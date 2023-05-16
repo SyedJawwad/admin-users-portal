@@ -10,18 +10,18 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'admin-users-portal';
-  user = UserType;
-  private router: any;
-  constructor(
-    private securityService: SecurityService  ) {}
-  ngOnInit():void {
+  // user = UserType;
+  // private router: any;
+  // constructor(
+  //   private securityService: SecurityService  ) {}
+  // ngOnInit():void {
     
-    this.securityService.securityObject = JSON.parse("userData");
-    if (this.user?.id) {
+  //   this.securityService.securityObject = JSON.parse("userData");
+  //   if (this.user?.id) {
 
-    } else {
-      this.router.navigateByUrl('./login/login.component');    }
-  }
+  //   } else {
+  //     this.router.navigateByUrl('./login/login.component');    }
+  // }
     
   
   
