@@ -13,9 +13,12 @@ export class PersonListComponent implements OnInit {
   userTypeEnum = UserType;
   personList=new Array<personDto>();
   personObj = new personDto();
+  userType: any
   selectedIndex = -1;
   localItem: string | null | undefined;
-  constructor(private authService: AuthService, public securityService: SecurityService) {}
+  constructor(private authService: AuthService, public securityService: SecurityService) {
+    this.userType = localStorage.getItem('userType')
+  }
 ngOnInit(): void {
   this.localItem = localStorage.getItem("List");
   if(this.localItem == null){

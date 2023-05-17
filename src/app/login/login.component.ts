@@ -19,10 +19,12 @@ export class LoginComponent {
     
     // Perform authentication logic (e.g., check credentials with a backend service)
     if(enteredEmail === 'admin@example.com' && enteredPassword === 'admin123'){
+      localStorage.setItem('userType', UserType.Admin)
       this.securityService.userType = UserType.Admin;
       this.router.navigate(['/person-list']);
     }
     else if(enteredEmail === 'member@example.com' && enteredPassword === 'member123'){
+      localStorage.setItem('userType', UserType.Member)
       this.securityService.userType = UserType.Member;
       this.router.navigate(['/person-list']);
     }

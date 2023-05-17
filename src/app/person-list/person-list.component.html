@@ -96,11 +96,11 @@
             <td>{{x.email}}</td>
             <td>{{x.address}}</td>
             <td>{{x.notes}}</td>
-            <td *ngIf="securityService.userType == userTypeEnum.Admin">
+            <td *ngIf="userType == '0'">
 
-              <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-danger bt-sm" type="button"
+              <button class="btn btn-danger bt-sm" type="button"
                 (click)="deleteList(i)"><i class="fa-solid fa-trash"></i></button>
-              <button *ngIf="securityService.userType == userTypeEnum.Admin" class="btn btn-primary mt-1 " type="button"
+              <button class="btn btn-primary mt-1 " type="button"
                 (click)="editList(i)"><i class="fa-solid fa-pen-to-square"></i></button>
             </td>
           </tr>
